@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Literal, NotRequired, TypedDict
 
-if TYPE_CHECKING:
-    from mipac.models.lite.user import PartialUser
 
+if TYPE_CHECKING:
+    from mipac.types.user import IPartialUser
 
 __all__ = ("IFileProperties", "IFolder", "IFile", "IDriveSort", "IDriveStatus")
 
@@ -55,4 +55,4 @@ class IFile(TypedDict):
     folder_id: str | None
     folder: NotRequired[IFolder | None]
     user_id: str | None
-    user: NotRequired[PartialUser | None]
+    user: NotRequired[IPartialUser | None]
