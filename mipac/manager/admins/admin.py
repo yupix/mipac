@@ -11,6 +11,10 @@ from mipac.manager.admins.announcement import (
     AdminAnnouncementManager,
     ClientAdminAnnouncementManager,
 )
+from mipac.manager.admins.avatar_decorations import (
+    AdminAvatarDecorationManager,
+    ClientAdminAvatarDecorationManager,
+)
 from mipac.manager.admins.drive import AdminDriveManager
 from mipac.manager.admins.emoji import AdminEmojiManager, ClientAdminEmojiManager
 from mipac.manager.admins.invite import AdminInviteManager
@@ -25,6 +29,7 @@ class AdminManager(AbstractManager):
     def __init__(self, session: HTTPClient, client: ClientManager):
         self.__session: HTTPClient = session
         self.__client: ClientManager = client
+        self.__action: AdminActions = AdminActions(session=self.__session, client=self.__client)
         self.emoji: AdminEmojiManager = AdminEmojiManager(session=session, client=client)
         self.user: AdminUserManager = AdminUserManager(session=session, client=client)
         self.ad: AdminAdManager = AdminAdManager(session=session, client=client)
@@ -35,10 +40,13 @@ class AdminManager(AbstractManager):
         self.invite: AdminInviteManager = AdminInviteManager(session=session, client=client)
         self.drive: AdminDriveManager = AdminDriveManager(session=session, client=client)
         self.account: AdminAccountManager = AdminAccountManager(session=session, client=client)
+        self.avatar_decoration: AdminAvatarDecorationManager = AdminAvatarDecorationManager(
+            session=session, client=client
+        )
 
     @property
     def action(self) -> AdminActions:
-        return AdminActions(session=self.__session, client=self.__client)
+        return self.__action
 
     def _create_role_model_manager(self, role_id: str) -> ClientAdminRoleManager:
         return ClientAdminRoleManager(
@@ -60,4 +68,13 @@ class AdminManager(AbstractManager):
     def _create_client_admin_emoji_manager(self, emoji_id: str) -> ClientAdminEmojiManager:
         return ClientAdminEmojiManager(
             emoji_id=emoji_id, session=self.__session, client=self.__client
+        )
+
+    def _create_client_admin_avatar_decoration_manager(
+        self, avatar_decoration_id: str
+    ) -> ClientAdminAvatarDecorationManager:
+        return ClientAdminAvatarDecorationManager(
+            avatar_decoration_id=avatar_decoration_id,
+            session=self.__session,
+            client=self.__client,
         )

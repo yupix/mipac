@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from datetime import datetime
 from typing import TYPE_CHECKING
 
@@ -5,13 +7,18 @@ from mipac.types.avatar_decoration import IAvatarDecoration
 from mipac.utils.format import str_to_datetime
 
 if TYPE_CHECKING:
+    from mipac.manager.admins.avatar_decorations import ClientAdminAvatarDecorationManager
     from mipac.client import ClientManager
 
 
 class AvatarDecoration:
-    def __init__(self, raw_avatar_decoration: IAvatarDecoration, client: ClientManager):
+    def __init__(self, raw_avatar_decoration: IAvatarDecoration, *, client: ClientManager):
         self.__raw_avatar_decoration: IAvatarDecoration = raw_avatar_decoration
-        self.__client: ClientManager = client
+        self.__api: ClientAdminAvatarDecorationManager = (
+            client.admin._create_client_admin_avatar_decoration_manager(
+                avatar_decoration_id=self.id
+            )
+        )
 
     @property
     def id(self) -> str:
@@ -35,3 +42,7 @@ class AvatarDecoration:
     @property
     def role_ids_that_can_be_used_this_decoration(self) -> list[str]:
         return self.__raw_avatar_decoration["role_ids_that_can_be_used_this_decoration"]
+
+    @property
+    def api(self) -> ClientAdminAvatarDecorationManager:
+        return self.__api
