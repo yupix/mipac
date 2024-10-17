@@ -19,7 +19,7 @@ args = parser.parse_args()
 
 class Generator:
     def __init__(self) -> None:
-        self.split_name = args.name.split("/")
+        self.split_name = list(map(lambda x: x.replace("-", "_"), args.name.split("/")))
         self.path = "/".join(self.split_name[:-1]) + "/"
         self.base_path = "../mipac"
 
