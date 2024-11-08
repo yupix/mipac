@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="genindex.html" /><link rel="search" title="検索" href="search.html" />
 
-    <!-- Generated with Sphinx 8.1.0 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
         <title>mipac ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
@@ -399,14 +399,6 @@ Attributes</span><ul>
 <dd></dd></dl>
 
 </section>
-<section id="roleuser">
-<h3>RoleUser<a class="headerlink" href="#roleuser" title="Link to this heading">¶</a></h3>
-<div class="py-attribute-table" data-move-to-id="mipac.models.roles.RoleUser"></div><dl class="py class">
-<dt class="sig sig-object py" id="mipac.models.roles.RoleUser">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.roles.</span></span><span class="sig-name descname"><span class="pre">RoleUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.roles.IRoleUser" title="mipac.types.roles.IRoleUser"><span class="pre">IRoleUser</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.roles.RoleUser" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</section>
 <section id="announcement">
 <h3>Announcement<a class="headerlink" href="#announcement" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.announcement.Announcement"><div class="py-attribute-table-column">
@@ -583,6 +575,14 @@ Attributes</span><ul>
 <div class="py-attribute-table" data-move-to-id="mipac.models.user.MeDetailedOnly"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.models.user.MeDetailedOnly">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.user.</span></span><span class="sig-name descname"><span class="pre">MeDetailedOnly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.user.IMeDetailedOnlySchema" title="mipac.types.user.IMeDetailedOnlySchema"><span class="pre">IMeDetailedOnlySchema</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.user.MeDetailedOnly" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="roleuser">
+<h3>RoleUser<a class="headerlink" href="#roleuser" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.models.user.RoleUser"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.models.user.RoleUser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.user.</span></span><span class="sig-name descname"><span class="pre">RoleUser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.roles.IRoleUser" title="mipac.types.roles.IRoleUser"><span class="pre">IRoleUser</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.user.RoleUser" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -960,7 +960,23 @@ Attributes</span><ul>
 <h3>Meta<a class="headerlink" href="#meta" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.meta.Meta"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.models.meta.Meta">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.meta.</span></span><span class="sig-name descname"><span class="pre">Meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IMeta" title="mipac.types.meta.IMeta"><span class="pre">IMeta</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.meta.Meta" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.meta.</span></span><span class="sig-name descname"><span class="pre">Meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IMetaDetailed" title="mipac.types.meta.IMetaDetailed"><span class="pre">IMetaDetailed</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.meta.Meta" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="metadetailedonly">
+<h3>MetaDetailedOnly<a class="headerlink" href="#metadetailedonly" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.models.meta.MetaDetailedOnly"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.models.meta.MetaDetailedOnly">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.meta.</span></span><span class="sig-name descname"><span class="pre">MetaDetailedOnly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IMetaDetailedOnly" title="mipac.types.meta.IMetaDetailedOnly"><span class="pre">IMetaDetailedOnly</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.meta.MetaDetailedOnly" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="systemwebhook">
+<h3>SystemWebhook<a class="headerlink" href="#systemwebhook" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.models.system_webhook.SystemWebhook"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.models.system_webhook.SystemWebhook">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SystemWebhook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_system_webhook</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.system_webhook.ISystemWebhook" title="mipac.types.system_webhook.ISystemWebhook"><span class="pre">ISystemWebhook</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.system_webhook.SystemWebhook" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -2724,6 +2740,14 @@ Attributes</span><ul>
 <dd></dd></dl>
 
 </section>
+<section id="avatardecoration">
+<h3>AvatarDecoration<a class="headerlink" href="#avatardecoration" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.models.avatar_decoration.AvatarDecoration"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.models.avatar_decoration.AvatarDecoration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.avatar_decoration.</span></span><span class="sig-name descname"><span class="pre">AvatarDecoration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_avatar_decoration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.user.IAvatarDecoration" title="mipac.types.user.IAvatarDecoration"><span class="pre">IAvatarDecoration</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.avatar_decoration.AvatarDecoration" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
 <section id="partialad">
 <h3>PartialAd<a class="headerlink" href="#partialad" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.lite.ad.PartialAd"><div class="py-attribute-table-column">
@@ -2766,8 +2790,8 @@ Attributes</span><ul>
 </dd></dl>
 
 </section>
-<section id="avatardecoration">
-<h3>AvatarDecoration<a class="headerlink" href="#avatardecoration" title="Link to this heading">¶</a></h3>
+<section id="id1">
+<h3>AvatarDecoration<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.lite.user.AvatarDecoration"><div class="py-attribute-table-column">
 <span>
 Attributes</span><ul>
@@ -3168,81 +3192,6 @@ def</span><a class="reference internal" href="#mipac.models.lite.user.PartialUse
 <dt class="sig sig-object py" id="mipac.models.lite.meta.PartialMeta">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.lite.meta.</span></span><span class="sig-name descname"><span class="pre">PartialMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">T</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.lite.meta.PartialMeta" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
-
-</section>
-<section id="policies">
-<h3>Policies<a class="headerlink" href="#policies" title="Link to this heading">¶</a></h3>
-<div class="py-attribute-table" data-move-to-id="mipac.models.lite.meta.Policies"><div class="py-attribute-table-column">
-<span>
-Attributes</span><ul>
-<li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_edit_note">can_edit_note</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_hide_ads">can_hide_ads</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_invite">can_invite</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_manage_custom_emojis">can_manage_custom_emojis</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_public_note">can_public_note</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_search_notes">can_search_notes</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.can_use_translator">can_use_translator</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.gtl_available">gtl_available</a></li><li class="py-attribute-table-entry">
-<a class="reference internal" href="#mipac.models.lite.meta.Policies.ltl_available">ltl_available</a></li></ul>
-</div></div><dl class="py class">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.lite.meta.</span></span><span class="sig-name descname"><span class="pre">Policies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_policies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IPolicies" title="mipac.types.meta.IPolicies"><span class="pre">IPolicies</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.lite.meta.Policies" title="Link to this definition">¶</a></dt>
-<dd><dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_edit_note">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_edit_note</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_edit_note" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can edit a note</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_hide_ads">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_hide_ads</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_hide_ads" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can hide ads</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_invite">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_invite</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_invite" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can invite</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_manage_custom_emojis">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_manage_custom_emojis</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_manage_custom_emojis" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can manage custom emojis</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_public_note">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_public_note</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_public_note" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can post a public note</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_search_notes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_search_notes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_search_notes" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can search note</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.can_use_translator">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_use_translator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.can_use_translator" title="Link to this definition">¶</a></dt>
-<dd><p>Whether you can use translator</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.gtl_available">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gtl_available</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.gtl_available" title="Link to this definition">¶</a></dt>
-<dd><p>Whether GTL is effective</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="mipac.models.lite.meta.Policies.ltl_available">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ltl_available</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#mipac.models.lite.meta.Policies.ltl_available" title="Link to this definition">¶</a></dt>
-<dd><p>Whether LTL is effective</p>
-</dd></dl>
-
-</dd></dl>
 
 </section>
 <section id="partialcustomemoji">
@@ -3808,6 +3757,22 @@ Attributes</span><ul>
 <div class="py-attribute-table" data-move-to-id="mipac.manager.admins.user.ClientAdminUserManager"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.manager.admins.user.ClientAdminUserManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.user.</span></span><span class="sig-name descname"><span class="pre">ClientAdminUserManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.user.ClientAdminUserManager" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="adminavatardecorationmanager">
+<h3>AdminAvatarDecorationManager<a class="headerlink" href="#adminavatardecorationmanager" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">AdminAvatarDecorationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="clientadminavatardecorationmanager">
+<h3>ClientAdminAvatarDecorationManager<a class="headerlink" href="#clientadminavatardecorationmanager" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">ClientAdminAvatarDecorationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar_decoration_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -7632,7 +7597,7 @@ Endpoint: <cite>/api/roles/notes</cite></p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mipac.actions.role.RoleActions.get_users">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">since_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsyncGenerator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#mipac.models.roles.RoleUser" title="mipac.models.roles.RoleUser"><span class="pre">RoleUser</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mipac.actions.role.RoleActions.get_users" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_users</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">role_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">since_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">until_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AsyncGenerator</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#mipac.models.user.RoleUser" title="mipac.models.user.RoleUser"><span class="pre">RoleUser</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mipac.actions.role.RoleActions.get_users" title="Link to this definition">¶</a></dt>
 <dd><p>Get users in a role.
 Endpoint: <cite>/api/roles/users</cite></p>
 <dl class="field-list simple">
@@ -8295,7 +8260,7 @@ async</span><a class="reference internal" href="#mipac.actions.admins.roles.Clie
 <dd class="field-even"><p>ロールユーザー</p>
 </dd>
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#mipac.models.roles.RoleUser" title="mipac.models.roles.RoleUser">RoleUser</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#mipac.models.user.RoleUser" title="mipac.models.user.RoleUser">RoleUser</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -8376,7 +8341,7 @@ async</span><a class="reference internal" href="#mipac.actions.admins.roles.Shar
 <dd class="field-even"><p>ロールユーザー</p>
 </dd>
 <dt class="field-odd">戻り値の型<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#mipac.models.roles.RoleUser" title="mipac.models.roles.RoleUser">RoleUser</a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#mipac.models.user.RoleUser" title="mipac.models.user.RoleUser">RoleUser</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -8701,6 +8666,30 @@ async</span><a class="reference internal" href="#mipac.actions.admins.user.Share
 </dd></dl>
 
 </dd></dl>
+
+</section>
+<section id="adminavatardecorationactions">
+<h3>AdminAvatarDecorationActions<a class="headerlink" href="#adminavatardecorationactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">AdminAvatarDecorationActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="clientadminavatardecorationactions">
+<h3>ClientAdminAvatarDecorationActions<a class="headerlink" href="#clientadminavatardecorationactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">ClientAdminAvatarDecorationActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar_decoration_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="sharedavatardecorationactions">
+<h3>SharedAvatarDecorationActions<a class="headerlink" href="#sharedavatardecorationactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">SharedAvatarDecorationActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="adminactions">
@@ -10578,6 +10567,14 @@ IMeDetailedOnlySchema が持つ avatar_id が無いことを確認する
 <dd></dd></dl>
 
 </section>
+<section id="imetadetailed">
+<h3>IMetaDetailed<a class="headerlink" href="#imetadetailed" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.types.meta.IMetaDetailed"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.types.meta.IMetaDetailed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.meta.</span></span><span class="sig-name descname"><span class="pre">IMetaDetailed</span></span><a class="headerlink" href="#mipac.types.meta.IMetaDetailed" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
 <section id="imetadetailedonly">
 <h3>IMetaDetailedOnly<a class="headerlink" href="#imetadetailedonly" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.types.meta.IMetaDetailedOnly"></div><dl class="py class">
@@ -10591,14 +10588,6 @@ IMeDetailedOnlySchema が持つ avatar_id が無いことを確認する
 <div class="py-attribute-table" data-move-to-id="mipac.types.meta.IPartialMeta"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.types.meta.IPartialMeta">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.meta.</span></span><span class="sig-name descname"><span class="pre">IPartialMeta</span></span><a class="headerlink" href="#mipac.types.meta.IPartialMeta" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</section>
-<section id="ipolicies">
-<h3>IPolicies<a class="headerlink" href="#ipolicies" title="Link to this heading">¶</a></h3>
-<div class="py-attribute-table" data-move-to-id="mipac.types.meta.IPolicies"></div><dl class="py class">
-<dt class="sig sig-object py" id="mipac.types.meta.IPolicies">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.meta.</span></span><span class="sig-name descname"><span class="pre">IPolicies</span></span><a class="headerlink" href="#mipac.types.meta.IPolicies" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -10623,6 +10612,14 @@ IMeDetailedOnlySchema が持つ avatar_id が無いことを確認する
 <div class="py-attribute-table" data-move-to-id="mipac.types.ads.IPartialAd"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.types.ads.IPartialAd">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.ads.</span></span><span class="sig-name descname"><span class="pre">IPartialAd</span></span><a class="headerlink" href="#mipac.types.ads.IPartialAd" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="isystemwebhook">
+<h3>ISystemWebhook<a class="headerlink" href="#isystemwebhook" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.types.system_webhook.ISystemWebhook"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.types.system_webhook.ISystemWebhook">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.system_webhook.</span></span><span class="sig-name descname"><span class="pre">ISystemWebhook</span></span><a class="headerlink" href="#mipac.types.system_webhook.ISystemWebhook" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -11039,6 +11036,14 @@ IMeDetailedOnlySchema が持つ avatar_id が無いことを確認する
 <div class="py-attribute-table" data-move-to-id="mipac.types.notification.IUserNf"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.types.notification.IUserNf">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.notification.</span></span><span class="sig-name descname"><span class="pre">IUserNf</span></span><a class="headerlink" href="#mipac.types.notification.IUserNf" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="id2">
+<h3>IAvatarDecoration<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.types.avatar_decoration.IAvatarDecoration"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.types.avatar_decoration.IAvatarDecoration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.types.avatar_decoration.</span></span><span class="sig-name descname"><span class="pre">IAvatarDecoration</span></span><a class="headerlink" href="#mipac.types.avatar_decoration.IAvatarDecoration" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -13148,10 +13153,6 @@ Attributes</span><ul>
 <li><a class="reference internal" href="#mipac.models.roles.RolePolicies"><code class="docutils literal notranslate"><span class="pre">RolePolicies</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#roleuser">RoleUser</a><ul>
-<li><a class="reference internal" href="#mipac.models.roles.RoleUser"><code class="docutils literal notranslate"><span class="pre">RoleUser</span></code></a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#announcement">Announcement</a><ul>
 <li><a class="reference internal" href="#mipac.models.announcement.Announcement"><code class="docutils literal notranslate"><span class="pre">Announcement</span></code></a><ul>
 <li><a class="reference internal" href="#mipac.models.announcement.Announcement.created_at"><code class="docutils literal notranslate"><span class="pre">Announcement.created_at</span></code></a></li>
@@ -13204,6 +13205,10 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#medetailedonly">MeDetailedOnly</a><ul>
 <li><a class="reference internal" href="#mipac.models.user.MeDetailedOnly"><code class="docutils literal notranslate"><span class="pre">MeDetailedOnly</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#roleuser">RoleUser</a><ul>
+<li><a class="reference internal" href="#mipac.models.user.RoleUser"><code class="docutils literal notranslate"><span class="pre">RoleUser</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#userdetailednotme">UserDetailedNotMe</a><ul>
@@ -13294,6 +13299,14 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#meta">Meta</a><ul>
 <li><a class="reference internal" href="#mipac.models.meta.Meta"><code class="docutils literal notranslate"><span class="pre">Meta</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#metadetailedonly">MetaDetailedOnly</a><ul>
+<li><a class="reference internal" href="#mipac.models.meta.MetaDetailedOnly"><code class="docutils literal notranslate"><span class="pre">MetaDetailedOnly</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemwebhook">SystemWebhook</a><ul>
+<li><a class="reference internal" href="#mipac.models.system_webhook.SystemWebhook"><code class="docutils literal notranslate"><span class="pre">SystemWebhook</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indexstat">IndexStat</a><ul>
@@ -13575,6 +13588,10 @@ Attributes</span><ul>
 <li><a class="reference internal" href="#mipac.models.notification.NotificationReaction"><code class="docutils literal notranslate"><span class="pre">NotificationReaction</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#avatardecoration">AvatarDecoration</a><ul>
+<li><a class="reference internal" href="#mipac.models.avatar_decoration.AvatarDecoration"><code class="docutils literal notranslate"><span class="pre">AvatarDecoration</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#partialad">PartialAd</a><ul>
 <li><a class="reference internal" href="#mipac.models.lite.ad.PartialAd"><code class="docutils literal notranslate"><span class="pre">PartialAd</span></code></a><ul>
 <li><a class="reference internal" href="#mipac.models.lite.ad.PartialAd.id"><code class="docutils literal notranslate"><span class="pre">PartialAd.id</span></code></a></li>
@@ -13583,7 +13600,7 @@ Attributes</span><ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#avatardecoration">AvatarDecoration</a><ul>
+<li><a class="reference internal" href="#id1">AvatarDecoration</a><ul>
 <li><a class="reference internal" href="#mipac.models.lite.user.AvatarDecoration"><code class="docutils literal notranslate"><span class="pre">AvatarDecoration</span></code></a><ul>
 <li><a class="reference internal" href="#mipac.models.lite.user.AvatarDecoration.angle"><code class="docutils literal notranslate"><span class="pre">AvatarDecoration.angle</span></code></a></li>
 <li><a class="reference internal" href="#mipac.models.lite.user.AvatarDecoration.flip_h"><code class="docutils literal notranslate"><span class="pre">AvatarDecoration.flip_h</span></code></a></li>
@@ -13627,21 +13644,6 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#partialmeta">PartialMeta</a><ul>
 <li><a class="reference internal" href="#mipac.models.lite.meta.PartialMeta"><code class="docutils literal notranslate"><span class="pre">PartialMeta</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#policies">Policies</a><ul>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies"><code class="docutils literal notranslate"><span class="pre">Policies</span></code></a><ul>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_edit_note"><code class="docutils literal notranslate"><span class="pre">Policies.can_edit_note</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_hide_ads"><code class="docutils literal notranslate"><span class="pre">Policies.can_hide_ads</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_invite"><code class="docutils literal notranslate"><span class="pre">Policies.can_invite</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_manage_custom_emojis"><code class="docutils literal notranslate"><span class="pre">Policies.can_manage_custom_emojis</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_public_note"><code class="docutils literal notranslate"><span class="pre">Policies.can_public_note</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_search_notes"><code class="docutils literal notranslate"><span class="pre">Policies.can_search_notes</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.can_use_translator"><code class="docutils literal notranslate"><span class="pre">Policies.can_use_translator</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.gtl_available"><code class="docutils literal notranslate"><span class="pre">Policies.gtl_available</span></code></a></li>
-<li><a class="reference internal" href="#mipac.models.lite.meta.Policies.ltl_available"><code class="docutils literal notranslate"><span class="pre">Policies.ltl_available</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#partialcustomemoji">PartialCustomEmoji</a><ul>
@@ -13861,6 +13863,14 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#clientadminusermanager">ClientAdminUserManager</a><ul>
 <li><a class="reference internal" href="#mipac.manager.admins.user.ClientAdminUserManager"><code class="docutils literal notranslate"><span class="pre">ClientAdminUserManager</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#adminavatardecorationmanager">AdminAvatarDecorationManager</a><ul>
+<li><a class="reference internal" href="#mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager"><code class="docutils literal notranslate"><span class="pre">AdminAvatarDecorationManager</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clientadminavatardecorationmanager">ClientAdminAvatarDecorationManager</a><ul>
+<li><a class="reference internal" href="#mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager"><code class="docutils literal notranslate"><span class="pre">ClientAdminAvatarDecorationManager</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#adminmanager">AdminManager</a><ul>
@@ -14445,6 +14455,18 @@ Attributes</span><ul>
 </li>
 </ul>
 </li>
+<li><a class="reference internal" href="#adminavatardecorationactions">AdminAvatarDecorationActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions"><code class="docutils literal notranslate"><span class="pre">AdminAvatarDecorationActions</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clientadminavatardecorationactions">ClientAdminAvatarDecorationActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions"><code class="docutils literal notranslate"><span class="pre">ClientAdminAvatarDecorationActions</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sharedavatardecorationactions">SharedAvatarDecorationActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions"><code class="docutils literal notranslate"><span class="pre">SharedAvatarDecorationActions</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adminactions">AdminActions</a><ul>
 <li><a class="reference internal" href="#mipac.actions.admins.admin.AdminActions"><code class="docutils literal notranslate"><span class="pre">AdminActions</span></code></a><ul>
 <li><a class="reference internal" href="#mipac.actions.admins.admin.AdminActions.get_meta"><code class="docutils literal notranslate"><span class="pre">AdminActions.get_meta()</span></code></a></li>
@@ -14809,16 +14831,16 @@ Attributes</span><ul>
 <li><a class="reference internal" href="#mipac.types.meta.IMeta"><code class="docutils literal notranslate"><span class="pre">IMeta</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#imetadetailed">IMetaDetailed</a><ul>
+<li><a class="reference internal" href="#mipac.types.meta.IMetaDetailed"><code class="docutils literal notranslate"><span class="pre">IMetaDetailed</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#imetadetailedonly">IMetaDetailedOnly</a><ul>
 <li><a class="reference internal" href="#mipac.types.meta.IMetaDetailedOnly"><code class="docutils literal notranslate"><span class="pre">IMetaDetailedOnly</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#ipartialmeta">IPartialMeta</a><ul>
 <li><a class="reference internal" href="#mipac.types.meta.IPartialMeta"><code class="docutils literal notranslate"><span class="pre">IPartialMeta</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ipolicies">IPolicies</a><ul>
-<li><a class="reference internal" href="#mipac.types.meta.IPolicies"><code class="docutils literal notranslate"><span class="pre">IPolicies</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#iupdatemetabody">IUpdateMetaBody</a><ul>
@@ -14831,6 +14853,10 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#ipartialad">IPartialAd</a><ul>
 <li><a class="reference internal" href="#mipac.types.ads.IPartialAd"><code class="docutils literal notranslate"><span class="pre">IPartialAd</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#isystemwebhook">ISystemWebhook</a><ul>
+<li><a class="reference internal" href="#mipac.types.system_webhook.ISystemWebhook"><code class="docutils literal notranslate"><span class="pre">ISystemWebhook</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#iindexstat">IIndexStat</a><ul>
@@ -15035,6 +15061,10 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#iusernf">IUserNf</a><ul>
 <li><a class="reference internal" href="#mipac.types.notification.IUserNf"><code class="docutils literal notranslate"><span class="pre">IUserNf</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">IAvatarDecoration</a><ul>
+<li><a class="reference internal" href="#mipac.types.avatar_decoration.IAvatarDecoration"><code class="docutils literal notranslate"><span class="pre">IAvatarDecoration</span></code></a></li>
 </ul>
 </li>
 </ul>

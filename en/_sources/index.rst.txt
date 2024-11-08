@@ -58,15 +58,6 @@ RolePolicies
     :members:
 
 
-RoleUser
-~~~~~~~~
-
-.. attributetable:: mipac.models.roles.RoleUser
-
-.. autoclass:: mipac.models.roles.RoleUser
-    :members:
-
-
 Announcement
 ~~~~~~~~~~~~
 
@@ -160,6 +151,15 @@ MeDetailedOnly
 .. attributetable:: mipac.models.user.MeDetailedOnly
 
 .. autoclass:: mipac.models.user.MeDetailedOnly
+    :members:
+
+
+RoleUser
+~~~~~~~~
+
+.. attributetable:: mipac.models.user.RoleUser
+
+.. autoclass:: mipac.models.user.RoleUser
     :members:
 
 
@@ -304,6 +304,24 @@ Meta
 .. attributetable:: mipac.models.meta.Meta
 
 .. autoclass:: mipac.models.meta.Meta
+    :members:
+
+
+MetaDetailedOnly
+~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.models.meta.MetaDetailedOnly
+
+.. autoclass:: mipac.models.meta.MetaDetailedOnly
+    :members:
+
+
+SystemWebhook
+~~~~~~~~~~~~~
+
+.. attributetable:: mipac.models.system_webhook.SystemWebhook
+
+.. autoclass:: mipac.models.system_webhook.SystemWebhook
     :members:
 
 
@@ -667,6 +685,15 @@ NotificationReaction
     :members:
 
 
+AvatarDecoration
+~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.models.avatar_decoration.AvatarDecoration
+
+.. autoclass:: mipac.models.avatar_decoration.AvatarDecoration
+    :members:
+
+
 PartialAd
 ~~~~~~~~~
 
@@ -709,15 +736,6 @@ PartialMeta
 .. attributetable:: mipac.models.lite.meta.PartialMeta
 
 .. autoclass:: mipac.models.lite.meta.PartialMeta
-    :members:
-
-
-Policies
-~~~~~~~~
-
-.. attributetable:: mipac.models.lite.meta.Policies
-
-.. autoclass:: mipac.models.lite.meta.Policies
     :members:
 
 
@@ -1160,6 +1178,24 @@ ClientAdminUserManager
 .. attributetable:: mipac.manager.admins.user.ClientAdminUserManager
 
 .. autoclass:: mipac.manager.admins.user.ClientAdminUserManager
+    :members:
+
+
+AdminAvatarDecorationManager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager
+
+.. autoclass:: mipac.manager.admins.avatar_decorations.AdminAvatarDecorationManager
+    :members:
+
+
+ClientAdminAvatarDecorationManager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager
+
+.. autoclass:: mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager
     :members:
 
 
@@ -1836,6 +1872,33 @@ SharedAdminUserActions
     :members:
 
 
+AdminAvatarDecorationActions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions
+
+.. autoclass:: mipac.actions.admins.avatar_decorations.AdminAvatarDecorationActions
+    :members:
+
+
+ClientAdminAvatarDecorationActions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions
+
+.. autoclass:: mipac.actions.admins.avatar_decorations.ClientAdminAvatarDecorationActions
+    :members:
+
+
+SharedAvatarDecorationActions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions
+
+.. autoclass:: mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions
+    :members:
+
+
 AdminActions
 ~~~~~~~~~~~~
 
@@ -2446,6 +2509,15 @@ IMeta
     :members:
 
 
+IMetaDetailed
+~~~~~~~~~~~~~
+
+.. attributetable:: mipac.types.meta.IMetaDetailed
+
+.. autoclass:: mipac.types.meta.IMetaDetailed
+    :members:
+
+
 IMetaDetailedOnly
 ~~~~~~~~~~~~~~~~~
 
@@ -2461,15 +2533,6 @@ IPartialMeta
 .. attributetable:: mipac.types.meta.IPartialMeta
 
 .. autoclass:: mipac.types.meta.IPartialMeta
-    :members:
-
-
-IPolicies
-~~~~~~~~~
-
-.. attributetable:: mipac.types.meta.IPolicies
-
-.. autoclass:: mipac.types.meta.IPolicies
     :members:
 
 
@@ -2497,6 +2560,15 @@ IPartialAd
 .. attributetable:: mipac.types.ads.IPartialAd
 
 .. autoclass:: mipac.types.ads.IPartialAd
+    :members:
+
+
+ISystemWebhook
+~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.types.system_webhook.ISystemWebhook
+
+.. autoclass:: mipac.types.system_webhook.ISystemWebhook
     :members:
 
 
@@ -2956,6 +3028,15 @@ IUserNf
 .. attributetable:: mipac.types.notification.IUserNf
 
 .. autoclass:: mipac.types.notification.IUserNf
+    :members:
+
+
+IAvatarDecoration
+~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.types.avatar_decoration.IAvatarDecoration
+
+.. autoclass:: mipac.types.avatar_decoration.IAvatarDecoration
     :members:
 Errors
 ------
