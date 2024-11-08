@@ -12,12 +12,10 @@ class IFederationFollowCommon(TypedDict):
     follower: NotRequired[IUserDetailedNotMeSchema]
 
 
-class IFederationFollower(IFederationFollowCommon):
-    ...
+class IFederationFollower(IFederationFollowCommon): ...
 
 
-class IFederationFollowing(IFederationFollowCommon):
-    ...
+class IFederationFollowing(IFederationFollowCommon): ...
 
 
 class IFollowRequest(TypedDict):

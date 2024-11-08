@@ -442,7 +442,6 @@ class SharedNoteActions(AbstractAction):
             Route("POST", "/api/notes/state"), auth=True, json=data
         )
         return NoteState(res)
-        
 
     async def add_clips(self, clip_id: str, *, note_id: str) -> bool:
         """Add a note to the clip

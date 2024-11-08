@@ -391,5 +391,5 @@ ENDPOINTS = Literal[
     "/api/reversi/invitations",
     "/api/reversi/show-game",
     "/api/reversi/surrender",
-    "/api/reversi/verify"
+    "/api/reversi/verify",
 ]

@@ -16,7 +16,9 @@ class AdminAccountActions(AbstractAction):
         self._session: HTTPClient = session
         self._client: ClientManager = client
 
-    async def create(self, username: str, password: str, setup_password: str | None=None) -> CreatedUser:
+    async def create(
+        self, username: str, password: str, setup_password: str | None = None
+    ) -> CreatedUser:
         """ユーザーを作成します
 
         Endpoint: `/api/admin/accounts/create`

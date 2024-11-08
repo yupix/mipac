@@ -21,12 +21,10 @@ class ClientActions(AbstractAction):
         self.__client: ClientManager = client
 
     @overload
-    async def get_meta(self, detail: Literal[False] = ...) -> PartialMeta:
-        ...
+    async def get_meta(self, detail: Literal[False] = ...) -> PartialMeta: ...
 
     @overload
-    async def get_meta(self, detail: Literal[True] = ...) -> Meta:
-        ...
+    async def get_meta(self, detail: Literal[True] = ...) -> Meta: ...
 
     async def get_meta(self, detail: bool = False):
         params = {

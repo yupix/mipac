@@ -1,7 +1,7 @@
 from typing import Literal, TypedDict
 
-IAdPlaces = Literal["square" "horizontal" "horizontal-big"]
-IAdPriority = Literal["high" "middle" "low"]
+IAdPlaces = Literal["square", "horizontal", "horizontal-big"]
+IAdPriority = Literal["high", "middle", "low"]
 
 
 class IPartialAd(TypedDict):

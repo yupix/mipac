@@ -338,7 +338,7 @@ class MeDetailedOnly:
     @property
     def banner_id(self) -> str | None:
         return self._raw_user["banner_id"]
-    
+
     @property
     def followed_message(self) -> str | None:
         return self._raw_user["followed_message"]
@@ -472,11 +472,11 @@ class MeDetailedOnly:
     @property
     def two_factor_enabled(self) -> bool:
         return self._raw_user["two_factor_enabled"]
-    
+
     @property
     def use_password_less_login(self) -> bool:
         return self._raw_user["use_password_less_login"]
-    
+
     @property
     def security_keys(self) -> bool:
         return self._raw_user["security_keys"]

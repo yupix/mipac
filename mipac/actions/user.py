@@ -867,9 +867,7 @@ class UserActions(SharedUserActions):
         host : str, default=None
             Hosts with target users
         """
-        return await self.fetch(
-            user_id=user_id, username=username, host=host, user_ids=user_ids
-        )
+        return await self.fetch(user_id=user_id, username=username, host=host, user_ids=user_ids)
 
     @cache(group="get_user", override=True)
     async def fetch(
@@ -978,8 +976,7 @@ class UserActions(SharedUserActions):
         detail: Literal[False] = ...,
         *,
         get_all: bool = False,
-    ) -> AsyncGenerator[PartialUser, None]:
-        ...
+    ) -> AsyncGenerator[PartialUser, None]: ...
 
     @overload
     async def search(
@@ -991,8 +988,7 @@ class UserActions(SharedUserActions):
         detail: Literal[True] = True,
         *,
         get_all: bool = False,
-    ) -> AsyncGenerator[UserDetailedNotMe | MeDetailed, None]:
-        ...
+    ) -> AsyncGenerator[UserDetailedNotMe | MeDetailed, None]: ...
 
     async def search(
         self,
