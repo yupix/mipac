@@ -31,6 +31,7 @@ class IRolePolicies(TypedDict):
     can_hide_ads: bool
     drive_capacity_mb: int
     always_mark_nfsw: bool
+    can_update_bio_media: bool
     pin_limit: int
     antenna_limit: int
     word_mute_limit: int
@@ -41,6 +42,11 @@ class IRolePolicies(TypedDict):
     user_each_user_lists_limit: int
     rate_limit_factor: int
     avatar_decoration_limit: int
+    can_import_antennas: bool
+    can_import_blocking: bool
+    can_import_following: bool
+    can_import_muting: bool
+    can_import_user_lists: bool
 
 
 class IPartialRole(TypedDict):

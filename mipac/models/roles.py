@@ -64,6 +64,10 @@ class RolePolicies:
         return self.__role_policies_data["can_public_note"]
 
     @property
+    def mention_limit(self) -> int:
+        return self.__raw_policies["mention_limit"]
+
+    @property
     def can_invite(self) -> bool:
         return self.__role_policies_data["can_invite"]
 
@@ -108,6 +112,10 @@ class RolePolicies:
         return self.__role_policies_data["always_mark_nfsw"]
 
     @property
+    def can_update_bio_media(self) -> bool:
+        return self.__raw_policies["can_update_bio_media"]
+
+    @property
     def pin_limit(self) -> int:
         return self.__role_policies_data["pin_limit"]
 
@@ -146,6 +154,26 @@ class RolePolicies:
     @property
     def avatar_decoration_limit(self) -> int:
         return self.__role_policies_data["avatar_decoration_limit"]
+
+    @property
+    def can_import_antennas(self) -> bool:
+        return self.__raw_policies["can_import_antennas"]
+
+    @property
+    def can_import_blocking(self) -> bool:
+        return self.__raw_policies["can_import_blocking"]
+
+    @property
+    def can_import_following(self) -> bool:
+        return self.__raw_policies["can_import_following"]
+
+    @property
+    def can_import_muting(self) -> bool:
+        return self.__raw_policies["can_import_muting"]
+
+    @property
+    def can_import_user_lists(self) -> bool:
+        return self.__raw_policies["can_import_user_lists"]
 
     def _get(self, key: str) -> Any | None:
         return self.__role_policies_data.get(key)
