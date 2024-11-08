@@ -7,8 +7,8 @@ from mipac.models.announcement import Announcement
 from mipac.models.lite.role import PartialRole
 from mipac.models.lite.user import PartialUser
 from mipac.models.note import Note
+from mipac.models.roles import RolePolicies
 from mipac.types.follow import IFederationFollowCommon, IFederationFollower, IFederationFollowing
-from mipac.types.meta import IPolicies
 from mipac.types.page import IPage
 from mipac.types.user import (
     EmailNotificationTypes,
@@ -466,8 +466,8 @@ class MeDetailedOnly:
         return self._raw_user["logged_in_days"]
 
     @property
-    def policies(self) -> IPolicies:  # TODO: モデル化
-        return self._raw_user["policies"]
+    def policies(self) -> RolePolicies:
+        return RolePolicies(self._raw_user["policies"])
 
     @property
     def two_factor_enabled(self) -> bool:

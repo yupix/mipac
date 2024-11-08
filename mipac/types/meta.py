@@ -1,6 +1,7 @@
 from typing import Any, Literal, NotRequired, TypedDict
 
 from mipac.types.ads import IPartialAd
+from mipac.types.roles import IRolePolicies
 
 ISensitiveMediaDetectionSentivity = Literal["medium", "low", "high", "veryLow", "veryHigh"]
 ISensitiveMediaDetection = Literal["none", "all", "local", "remote"]
@@ -9,81 +10,80 @@ ISensitiveMediaDetection = Literal["none", "all", "local", "remote"]
 class IFeatures(TypedDict):
     registration: bool
     email_required_for_signup: bool
+    local_timeline: bool
+    global_timeline: bool
     hcaptcha: bool
-    recaptcha: bool
     turnstile: bool
+    recaptcha: bool
     object_storage: bool
     service_worker: bool
     miauth: bool
-
-
-class IPolicies(TypedDict):
-    gtl_available: bool
-    ltl_available: bool
-    can_public_note: bool
-    can_edit_note: bool
-    can_invite: bool
-    invite_limit: int
-    invite_limit_cycle: int
-    invite_expiration_time: int
-    can_manage_custom_emojis: bool
-    can_search_notes: bool
-    can_use_translator: bool
-    can_hide_ads: bool
-    drive_capacity_mb: int
-    always_mark_nsfw: bool
-    pin_limit: int
-    antenna_limit: int
-    word_mute_limit: int
-    webhook_limit: int
-    clip_limit: int
-    note_each_clips_limit: int
-    user_list_limit: int
-    user_each_user_lists_limit: int
-    rate_limit_factor: int
 
 
 class IPartialMeta(TypedDict):
     maintainer_name: str | None
     maintainer_email: str | None
     version: str
-    name: None
-    short_name: None
+    provides_tar_ball: bool
+    name: str | None
+    short_name: str | None
     uri: str
-    description: None
+    description: str | None
     langs: list[str]
-    tos_url: str
-    repository_url: str
-    feedback_url: str
+    tos_url: str | None
+    repository_url: str | None
+    feedback_url: str | None
+    default_dark_theme: str | None
+    default_light_theme: str | None
     disable_registration: bool
     email_required_for_signup: bool
     enable_hcaptcha: bool
-    hcaptcha_site_key: None
+    hcaptcha_site_key: str | None
+    enable_mcaptcha: bool
+    mcaptcha_site_key: str
+    mcaptcha_instance_url: str | None
     enable_recaptcha: bool
-    recaptcha_site_key: str
+    recaptcha_site_key: str | None
     enable_turnstile: bool
-    turnstile_site_key: str
-    sw_publickey: None
-    theme_color: str
+    turnstile_site_key: str | None
+    enable_testcaptcha: bool
+    sw_publickey: str | None
     mascot_image_url: str
     banner_url: str | None
-    info_image_url: str | None
     server_error_image_url: str | None
+    info_image_url: str | None
     not_found_image_url: str | None
     icon_url: str | None
-    background_image_url: str | None
-    logo_image_url: str | None
     max_note_text_length: int
-    default_light_theme: str | None
-    default_dark_theme: str | None
     ads: list[IPartialAd]
+    notes_per_one_ad: int
     enable_email: bool
     enable_service_worker: bool
     translator_available: bool
+    media_proxy: bool
+    enable_url_preview: bool
+    background_image_url: str | None
+    impressum_url: str | None
+    logo_image_url: str | None
+    privacy_policy_url: str | None
     inquiry_url: str | None
     server_rules: list[str]
-    policies: IPolicies
-    media_proxy: str
+    theme_color: str | None
+    policies: IRolePolicies
+    note_searchable_scope: Literal["local", "global"]
+    max_file_size: int
+
+
+class IMetaDetailedOnly(TypedDict):
+    features: IFeatures
+    proxy_account_name: str | None
+    require_setup: bool
+    cache_remote_files: bool
+    cache_remote_sensitive_files: bool
+
+
+class MetaDetailed(IPartialMeta, IMetaDetailedOnly):
+    pass
 
 
 class IMetaDetailedOnly(TypedDict):
@@ -94,8 +94,7 @@ class IMetaDetailedOnly(TypedDict):
     cache_remote_sensitive_files: bool
 
 
-class IMeta(IPartialMeta, TypedDict):
-    ...
+class IMeta(IPartialMeta, TypedDict): ...
 
 
 class IAdminMeta(TypedDict):  # IMetaに含まれる物が多くあるけど、ない場合もあるので別にする
@@ -179,7 +178,7 @@ class IAdminMeta(TypedDict):  # IMetaに含まれる物が多くあるけど、�
     enable_charts_for_federated_instances: bool
     enable_server_machine_stats: bool
     enable_identicon_generation: bool
-    policies: IPolicies
+    policies: IRolePolicies
     manifest_json_override: dict[str, Any]
 
 

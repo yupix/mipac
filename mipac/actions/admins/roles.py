@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, Literal, override
 
+from mipac import IRolePolicies
 from mipac.http import HTTPClient, Route
 from mipac.models.roles import Role, RoleUser
-from mipac.types.meta import IPolicies
 from mipac.types.roles import IRole, IRoleUser
 from mipac.utils.format import remove_dict_missing
 from mipac.utils.pagination import Pagination
@@ -302,7 +302,7 @@ class AdminRoleActions(SharedAdminRoleActions):
         )
         return [Role(i, client=self._client) for i in res]
 
-    async def update_default_policies(self, policies: IPolicies):
+    async def update_default_policies(self, policies: IRolePolicies):  # TODO: ここあとでキー追加する
         body = {
             "policies": {
                 "gtlAvailable": policies.get("gtl_available"),

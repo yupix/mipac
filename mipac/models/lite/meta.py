@@ -3,119 +3,11 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Any
 
 from mipac.models.lite.ad import PartialAd
-from mipac.types.meta import IPartialMeta, IPolicies
+from mipac.models.roles import RolePolicies
+from mipac.types.meta import IPartialMeta
 
 if TYPE_CHECKING:
     from mipac.manager.client import ClientManager
-
-
-class Policies:
-    def __init__(self, raw_policies: IPolicies) -> None:
-        self.__raw_policies: IPolicies = raw_policies
-
-    @property
-    def gtl_available(self) -> bool:
-        """Whether GTL is effective"""
-        return self.__raw_policies["gtl_available"]
-
-    @property
-    def ltl_available(self) -> bool:
-        """Whether LTL is effective"""
-        return self.__raw_policies["ltl_available"]
-
-    @property
-    def can_public_note(self) -> bool:
-        """Whether you can post a public note"""
-        return self.__raw_policies["can_public_note"]
-
-    @property
-    def can_edit_note(self) -> bool:
-        """Whether you can edit a note"""
-        return self.__raw_policies["can_edit_note"]
-
-    @property
-    def can_invite(self) -> bool:
-        """Whether you can invite"""
-        return self.__raw_policies["can_invite"]
-
-    @property
-    def invite_limit(self) -> int:
-        return self.__raw_policies["invite_limit"]
-
-    @property
-    def invite_limit_cycle(self) -> int:
-        return self.__raw_policies["invite_limit_cycle"]
-
-    @property
-    def invite_expiration_time(self) -> int:
-        return self.__raw_policies["invite_expiration_time"]
-
-    @property
-    def can_manage_custom_emojis(self) -> bool:
-        """Whether you can manage custom emojis"""
-        return self.__raw_policies["can_manage_custom_emojis"]
-
-    @property
-    def can_search_notes(self) -> bool:
-        """Whether you can search note"""
-        return self.__raw_policies["can_search_notes"]
-
-    @property
-    def can_use_translator(self) -> bool:
-        """Whether you can use translator"""
-        return self.__raw_policies["can_use_translator"]
-
-    @property
-    def can_hide_ads(self) -> bool:
-        """Whether you can hide ads"""
-        return self.__raw_policies["can_hide_ads"]
-
-    @property
-    def drive_capacity_mb(self) -> int:
-        return self.__raw_policies["drive_capacity_mb"]
-
-    @property
-    def always_mark_nsfw(self) -> bool:
-        return self.__raw_policies["always_mark_nsfw"]
-
-    @property
-    def pin_limit(self) -> int:
-        return self.__raw_policies["pin_limit"]
-
-    @property
-    def antenna_limit(self) -> int:
-        return self.__raw_policies["antenna_limit"]
-
-    @property
-    def word_mute_limit(self) -> int:
-        return self.__raw_policies["word_mute_limit"]
-
-    @property
-    def webhook_limit(self) -> int:
-        return self.__raw_policies["webhook_limit"]
-
-    @property
-    def clip_limit(self) -> int:
-        return self.__raw_policies["clip_limit"]
-
-    @property
-    def note_each_clips_limit(self) -> int:
-        return self.__raw_policies["note_each_clips_limit"]
-
-    @property
-    def user_list_limit(self) -> int:
-        return self.__raw_policies["user_list_limit"]
-
-    @property
-    def user_each_user_lists_limit(self) -> int:
-        return self.__raw_policies["user_each_user_lists_limit"]
-
-    @property
-    def rate_limit_factor(self) -> int:
-        return self.__raw_policies["rate_limit_factor"]
-
-    def _get(self, key: str) -> Any | None:
-        return self.__raw_policies.get(key)
 
 
 class PartialMeta[T: IPartialMeta]:
@@ -276,8 +168,8 @@ class PartialMeta[T: IPartialMeta]:
         return self._raw_meta["server_rules"]
 
     @property
-    def policies(self) -> IPolicies:
-        return self._raw_meta["policies"]
+    def policies(self) -> RolePolicies:
+        return RolePolicies(self._raw_meta["policies"])
 
     @property
     def media_proxy(self) -> str:

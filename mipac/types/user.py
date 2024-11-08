@@ -2,8 +2,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Literal, NotRequired, TypedDict, TypeGuard
 
-from mipac.types.meta import IPolicies
-from mipac.types.roles import IPartialRole
+from mipac.types.roles import IPartialRole, IRolePolicies
 
 if TYPE_CHECKING:
     from mipac.types.announcement import IAnnouncement
@@ -200,7 +199,7 @@ class IMeDetailedOnlySchema(TypedDict):
     email_notification_types: list[EmailNotificationTypes]
     achievements: list[IAchievement]
     logged_in_days: int
-    policies: IPolicies
+    policies: IRolePolicies
     two_factor_enabled: bool
     use_password_less_login: bool
     security_keys: bool
