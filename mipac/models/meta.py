@@ -1,12 +1,12 @@
 from __future__ import annotations
 
+
 from typing import TYPE_CHECKING, Any
 
 from mipac.models.lite.meta import PartialMeta
 from mipac.types.meta import (
     IAdminMeta,
     IFeatures,
-    IMeta,
     ISensitiveMediaDetection,
     ISensitiveMediaDetectionSentivity, IMetaDetailed, IMetaDetailedOnly,
 )
