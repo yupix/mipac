@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, Literal, override
 
-from mipac import IRolePolicies
 from mipac.http import Route
 from mipac.models.roles import Role
 from mipac.models.user import RoleUser
@@ -12,6 +11,7 @@ from mipac.utils.pagination import Pagination
 from mipac.utils.util import MISSING
 
 if TYPE_CHECKING:
+    from mipac.types.roles import IRolePolicies
     from mipac.http import HTTPClient
     from mipac.manager.client import ClientManager
 
