@@ -1,50 +1,15 @@
 from __future__ import annotations
 
-from datetime import datetime
 from typing import TYPE_CHECKING, Any
 
 from mipac.models.lite.role import PartialRole
-from mipac.models.user import MeDetailed, UserDetailedNotMe, packed_user
-from mipac.types.roles import IRole, IRolePolicies, IRoleUser
-from mipac.utils.format import str_to_datetime
+from mipac.types.roles import IRole, IRolePolicies
 
 if TYPE_CHECKING:
     from mipac.manager.client import ClientManager
 
 
-class RoleUser:
-    def __init__(self, role_user: IRoleUser, *, client: ClientManager) -> None:
-        self.__role_user = role_user
-        self.__client = client
 
-    @property
-    def id(self) -> str:
-        return self.__role_user["id"]
-
-    @property
-    def created_at(self) -> datetime:
-        return str_to_datetime(self.__role_user["created_at"])
-
-    @property
-    def user(self) -> UserDetailedNotMe | MeDetailed:
-        return packed_user(self.__role_user["user"], client=self.__client)
-
-    @property
-    def expires_at(self) -> datetime | None:
-        return (
-            str_to_datetime(self.__role_user["expires_at"])
-            if self.__role_user["expires_at"]
-            else None
-        )
-
-    def _get(self, key: str) -> Any | None:
-        return self.__role_user.get(key)
-
-    def __eq__(self, __value: object) -> bool:
-        return isinstance(__value, RoleUser) and self.id == __value.id
-
-    def __ne__(self, __value: object) -> bool:
-        return not self.__eq__(__value)
 
 
 class RolePolicies:

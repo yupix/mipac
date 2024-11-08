@@ -8,7 +8,7 @@ from mipac.types.meta import (
     IFeatures,
     IMeta,
     ISensitiveMediaDetection,
-    ISensitiveMediaDetectionSentivity,
+    ISensitiveMediaDetectionSentivity, IMetaDetailed, IMetaDetailedOnly,
 )
 
 if TYPE_CHECKING:
@@ -28,16 +28,24 @@ class Features:
         return self.__raw_features["email_required_for_signup"]
 
     @property
+    def local_timeline(self) -> bool:
+        return self.__raw_features["local_timeline"]
+
+    @property
+    def global_timeline(self) -> bool:
+        return self.__raw_features["global_timeline"]
+
+    @property
     def hcaptcha(self) -> bool:
         return self.__raw_features["hcaptcha"]
 
     @property
-    def recaptcha(self) -> bool:
-        return self.__raw_features["recaptcha"]
-
-    @property
     def turnstile(self) -> bool:
         return self.__raw_features["turnstile"]
+
+    @property
+    def recaptcha(self) -> bool:
+        return self.__raw_features["recaptcha"]
 
     @property
     def object_storage(self) -> bool:
@@ -55,13 +63,21 @@ class Features:
         return self.__raw_features.get(key)
 
 
-class Meta(PartialMeta[IMeta]):
-    def __init__(self, instance_metadata: IMeta, *, client: ClientManager) -> None:
-        super().__init__(instance_metadata, client=client)
+class MetaDetailedOnly:
+    def __init__(self, raw_meta: IMetaDetailedOnly, *, client: ClientManager):
+        self._raw_meta: IMetaDetailedOnly = raw_meta
 
     @property
     def features(self) -> Features:
         return Features(self._raw_meta["features"])
+
+    @property
+    def proxy_account_name(self) -> str:
+        return self._raw_meta["proxy_account_name"]
+
+    @property
+    def require_setup(self) -> bool:
+        return self._raw_meta["require_setup"]
 
     @property
     def cache_remote_files(self) -> bool:
@@ -71,13 +87,10 @@ class Meta(PartialMeta[IMeta]):
     def cache_remote_sensitive_files(self) -> bool:
         return self._raw_meta["cache_remote_sensitive_files"]
 
-    @property
-    def require_setup(self) -> bool:
-        return self._raw_meta["require_setup"]
 
-    @property
-    def proxy_account_name(self) -> str:
-        return self._raw_meta["proxy_account_name"]
+class Meta(PartialMeta[IMetaDetailed], MetaDetailedOnly):
+    def __init__(self, instance_metadata: IMetaDetailed, *, client: ClientManager) -> None:
+        super().__init__(instance_metadata, client=client)
 
 
 class AdminMeta:

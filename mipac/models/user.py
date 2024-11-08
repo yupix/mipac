@@ -10,6 +10,7 @@ from mipac.models.note import Note
 from mipac.models.roles import RolePolicies
 from mipac.types.follow import IFederationFollowCommon, IFederationFollower, IFederationFollowing
 from mipac.types.page import IPage
+from mipac.types.roles import IRoleUser
 from mipac.types.user import (
     EmailNotificationTypes,
     GetFrequentlyRepliedUsersResponse,
@@ -53,7 +54,42 @@ __all__ = (
     "UserListMembership",
     "FrequentlyRepliedUser",
     "CreatedUser",
+    "RoleUser",
 )
+
+class RoleUser:
+    def __init__(self, role_user: IRoleUser, *, client: ClientManager) -> None:
+        self.__role_user = role_user
+        self.__client = client
+
+    @property
+    def id(self) -> str:
+        return self.__role_user["id"]
+
+    @property
+    def created_at(self) -> datetime:
+        return str_to_datetime(self.__role_user["created_at"])
+
+    @property
+    def user(self) -> UserDetailedNotMe | MeDetailed:
+        return packed_user(self.__role_user["user"], client=self.__client)
+
+    @property
+    def expires_at(self) -> datetime | None:
+        return (
+            str_to_datetime(self.__role_user["expires_at"])
+            if self.__role_user["expires_at"]
+            else None
+        )
+
+    def _get(self, key: str) -> Any | None:
+        return self.__role_user.get(key)
+
+    def __eq__(self, __value: object) -> bool:
+        return isinstance(__value, RoleUser) and self.id == __value.id
+
+    def __ne__(self, __value: object) -> bool:
+        return not self.__eq__(__value)
 
 
 class FollowCommon[FFC: IFederationFollowCommon]:

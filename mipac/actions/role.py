@@ -5,7 +5,8 @@ from typing import TYPE_CHECKING, AsyncGenerator
 from mipac.abstract.action import AbstractAction
 from mipac.http import HTTPClient, Route
 from mipac.models.note import Note
-from mipac.models.roles import Role, RoleUser
+from mipac.models.user import RoleUser
+from mipac.models.roles import Role
 from mipac.types.note import INote
 from mipac.types.roles import IRole, IRoleUser
 from mipac.utils.pagination import Pagination

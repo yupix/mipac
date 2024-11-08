@@ -40,7 +40,7 @@ class IPartialMeta(TypedDict):
     enable_hcaptcha: bool
     hcaptcha_site_key: str | None
     enable_mcaptcha: bool
-    mcaptcha_site_key: str
+    mcaptcha_site_key: str | None
     mcaptcha_instance_url: str | None
     enable_recaptcha: bool
     recaptcha_site_key: str | None
@@ -82,7 +82,7 @@ class IMetaDetailedOnly(TypedDict):
     cache_remote_sensitive_files: bool
 
 
-class MetaDetailed(IPartialMeta, IMetaDetailedOnly):
+class IMetaDetailed(IPartialMeta, IMetaDetailedOnly):
     pass
 
 
