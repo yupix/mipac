@@ -4,15 +4,21 @@
 
 `2024.10.0-beta.6`
 
-## Supported endpoints (173/383)
+## Supported endpoints (177/383)
 
+- [x] /admin/accounts/create
 - [x] /admin/accounts/delete
 - [x] /admin/ad/create
 - [x] /admin/ad/delete
 - [x] /admin/ad/list
+- [x] /admin/ad/update
 - [x] /admin/announcements/create
 - [x] /admin/announcements/delete
 - [x] /admin/announcements/update
+- [x] /admin/avatar-decorations/create
+- [x] /admin/avatar-decorations/delete
+- [x] /admin/avatar-decorations/list
+- [x] /admin/avatar-decorations/update
 - [x] /admin/drive/clean-remote-files
 - [x] /admin/drive/cleanup
 - [x] /admin/drive/files
@@ -32,6 +38,7 @@
 - [x] /admin/invite/create
 - [x] /admin/invite/list
 - [x] /admin/reset-password
+- [x] /admin/resolve-abuse-user-report
 - [x] /admin/send-email
 - [x] /admin/show-moderation-logs
 - [x] /admin/suspend-user
@@ -41,6 +48,7 @@
 - [x] /admin/roles/delete
 - [x] /admin/roles/list
 - [x] /admin/roles/show
+- [x] /admin/roles/update
 - [x] /admin/roles/assign
 - [x] /admin/roles/unassign
 - [x] /admin/roles/update-default-policies
@@ -60,6 +68,7 @@
 - [x] /channels/unfavorite
 - [x] /channels/my-favorites
 - [x] /channels/search
+- [x] /drive
 - [x] /drive/files
 - [x] /drive/files/attached-notes
 - [x] /drive/files/check-existence
@@ -111,10 +120,6 @@
 
 - [ ] /admin/abuse-user-reports
 - [ ] /admin/announcements/list
-- [ ] /admin/avatar-decorations/create
-- [ ] /admin/avatar-decorations/delete
-- [ ] /admin/avatar-decorations/list
-- [ ] /admin/avatar-decorations/update
 - [ ] /admin/delete-all-files-of-a-user
 - [ ] /admin/federation/delete-all-files
 - [ ] /admin/federation/refresh-remote-instance-metadata
@@ -322,15 +327,10 @@
 
 ## Changed request body or responses
 
-- [ ] /admin/accounts/create (Need to work)
-- [ ] /admin/ad/update (Need to work)
 - [ ] /admin/drive/show-file (Need to work)
 - [ ] /admin/get-index-stats (Need to work)
 - [ ] /admin/get-table-stats (Need to work)
-- [ ] /admin/resolve-abuse-user-report (Need to work)
 - [ ] /admin/update-meta (Need to work)
-- [ ] /admin/roles/update (Need to work)
-- [ ] /drive (Need to work)
 - [ ] /drive/stream (Need to work)
 - [ ] /endpoint (Need to work)
 - [ ] /federation/instances (Need to work)
@@ -405,9 +405,9 @@
 ## Supported schemas
 
 - [ ] Error
-- [ ] UserLite (Need to work)
-- [ ] UserDetailedNotMeOnly (Need to work)
-- [ ] MeDetailedOnly (Need to work)
+- [x] UserLite
+- [x] UserDetailedNotMeOnly
+- [x] MeDetailedOnly
 - [x] UserDetailedNotMe
 - [x] MeDetailed
 - [x] UserDetailed
@@ -419,8 +419,8 @@
 - [x] NoteReaction
 - [ ] NoteFavorite
 - [ ] Notification
-- [ ] DriveFile (Need to work)
-- [ ] DriveFolder (Need to work)
+- [x] DriveFile
+- [x] DriveFolder
 - [ ] Following (Need to work)
 - [ ] Muting
 - [ ] RenoteMuting
@@ -451,10 +451,10 @@
 - [ ] RoleCondFormulaValueCreated
 - [ ] RoleCondFormulaFollowersOrFollowingOrNotes
 - [ ] RoleCondFormulaValue
-- [ ] RolePolicies
-- [ ] MetaLite (Need to work)
-- [ ] MetaDetailedOnly (Need to work)
+- [x] RolePolicies
+- [x] MetaLite
+- [x] MetaDetailedOnly
 - [x] MetaDetailed
 - [ ] RoleCondFormulaValueUserSettingBooleanSchema
-- [ ] SystemWebhook
+- [x] SystemWebhook
 - [ ] AbuseReportNotificationRecipient

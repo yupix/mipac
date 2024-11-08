@@ -71,25 +71,25 @@
                 "path": "/admin/avatar-decorations/create",
                 "request_body_hash": "b740709b9f22f20dbc5fa952b3b54b708efa1701289dd740f23f5702d9990afe",
                 "response_body_hash": "df9c0f9df08effe88b00991f12e46077998bd6d6c3442ec518e5f463680a2c54",
-                "status": "notSupported"
+                "status": "supported"
             },
             "/admin/avatar-decorations/delete": {
                 "path": "/admin/avatar-decorations/delete",
                 "request_body_hash": "3e47b10418dc28d7a702f3c13c8f0cd061a88803f92ad7d9009e930a8ba8d004",
                 "response_body_hash": "df9c0f9df08effe88b00991f12e46077998bd6d6c3442ec518e5f463680a2c54",
-                "status": "notSupported"
+                "status": "supported"
             },
             "/admin/avatar-decorations/list": {
                 "path": "/admin/avatar-decorations/list",
                 "request_body_hash": "39fc2cdb726b8e838010dcd8ec8caeafcfee0004c3163ab32cde5d47361003d9",
                 "response_body_hash": "ece73ac4d7c39bdc25d18d93c14fe5b8461afff066b9850c4448f766bb392d45",
-                "status": "notSupported"
+                "status": "supported"
             },
             "/admin/avatar-decorations/update": {
                 "path": "/admin/avatar-decorations/update",
                 "request_body_hash": "8c943061b97adfe655b2ec33b6b813a082bd1f51145c91e63cf15a7fbabec81d",
                 "response_body_hash": "df9c0f9df08effe88b00991f12e46077998bd6d6c3442ec518e5f463680a2c54",
-                "status": "notSupported"
+                "status": "supported"
             },
             "/admin/delete-all-files-of-a-user": {
                 "path": "/admin/delete-all-files-of-a-user",
@@ -749,7 +749,7 @@
                 "path": "/drive",
                 "request_body_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
                 "response_body_hash": "c0158a26309e6fdbe4661e3c61df1525620049072bcc3351c69ee886acbc753a",
-                "status": "needToWork"
+                "status": "supported"
             },
             "/drive/files": {
                 "path": "/drive/files",
@@ -2311,17 +2311,17 @@
         "UserLite": {
             "name": "UserLite",
             "hash": "701ced0237e6ae2057165df2d6ecea410050b19be3b5875a248591a24eae0b12",
-            "status": "needToWork"
+            "status": "supported"
         },
         "UserDetailedNotMeOnly": {
             "name": "UserDetailedNotMeOnly",
             "hash": "489cf472f0afb4e5ea02b19fffdd285f628a3b1e8143a078da9d0db3d5b9db24",
-            "status": "needToWork"
+            "status": "supported"
         },
         "MeDetailedOnly": {
             "name": "MeDetailedOnly",
             "hash": "e811713c666ee60b3b89de14984933a4f23992fd2532afbcbbd4e595c8f45bee",
-            "status": "needToWork"
+            "status": "supported"
         },
         "UserDetailedNotMe": {
             "name": "UserDetailedNotMe",
@@ -2381,12 +2381,12 @@
         "DriveFile": {
             "name": "DriveFile",
             "hash": "90996956bdedd25ba7716e7fb0d878db07d3e2fbbfbe2f8b2acddec6a1f0ce32",
-            "status": "needToWork"
+            "status": "supported"
         },
         "DriveFolder": {
             "name": "DriveFolder",
             "hash": "6751202b7d4cb6f97465fcd98d21e66f4b746566a3c1d994ee0bd93fbb2aeeca",
-            "status": "needToWork"
+            "status": "supported"
         },
         "Following": {
             "name": "Following",
@@ -2541,17 +2541,17 @@
         "RolePolicies": {
             "name": "RolePolicies",
             "hash": "7189c1808470dad077795037d0a31d9f29e159fbfdeb6fbdc7e3d2a33574a4b3",
-            "status": "notSupported"
+            "status": "supported"
         },
         "MetaLite": {
             "name": "MetaLite",
             "hash": "efb0a61f34be61d23e259d9a91280ac57a5cb78fdd5c679bfa91d3458b7d7a9f",
-            "status": "needToWork"
+            "status": "supported"
         },
         "MetaDetailedOnly": {
             "name": "MetaDetailedOnly",
             "hash": "79538f592fe7385a990df44f20198691b483f771e0b43fa8920ee17cea22c2d2",
-            "status": "needToWork"
+            "status": "supported"
         },
         "MetaDetailed": {
             "name": "MetaDetailed",
@@ -2566,7 +2566,7 @@
         "SystemWebhook": {
             "name": "SystemWebhook",
             "hash": "7c1d50486d95e18e0f4889298840545ae3d75c4a3d8e0c9fec9aa9c06ed08d4f",
-            "status": "notSupported"
+            "status": "supported"
         },
         "AbuseReportNotificationRecipient": {
             "name": "AbuseReportNotificationRecipient",
