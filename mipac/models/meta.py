@@ -7,8 +7,6 @@ from mipac.models.lite.meta import PartialMeta
 from mipac.types.meta import (
     IAdminMeta,
     IFeatures,
-    ISensitiveMediaDetection,
-    ISensitiveMediaDetectionSentivity,
     IMetaDetailed,
     IMetaDetailedOnly,
 )

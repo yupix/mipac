@@ -1,4 +1,4 @@
-from typing import Any, Literal, NotRequired, TypedDict
+from typing import Literal, NotRequired, TypedDict
 
 from mipac.types.ads import IPartialAd
 from mipac.types.roles import IRolePolicies
