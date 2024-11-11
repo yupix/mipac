@@ -9,9 +9,6 @@ if TYPE_CHECKING:
     from mipac.manager.client import ClientManager
 
 
-
-
-
 class RolePolicies:
     def __init__(self, role_policies_data: IRolePolicies) -> None:
         self.__role_policies_data = role_policies_data

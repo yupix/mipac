@@ -57,6 +57,7 @@ __all__ = (
     "RoleUser",
 )
 
+
 class RoleUser:
     def __init__(self, role_user: IRoleUser, *, client: ClientManager) -> None:
         self.__role_user = role_user

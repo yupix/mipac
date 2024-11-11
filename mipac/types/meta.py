@@ -96,6 +96,7 @@ class IMetaDetailedOnly(TypedDict):
 
 class IMeta(IPartialMeta, TypedDict): ...
 
+
 class IAdminMeta(TypedDict):
     cache_remote_files: bool
     cache_remote_sensitive_files: bool
@@ -211,6 +212,7 @@ class IAdminMeta(TypedDict):
     url_preview_summary_proxy_url: str | None
     federation: str
     federation_hosts: list[str]
+
 
 class IUpdateMetaBody(TypedDict, total=False):
     announcements: list

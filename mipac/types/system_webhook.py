@@ -1,11 +1,11 @@
 from typing import TypedDict, Literal
 
 SystemWebhookEventTypes = Literal[
-    'abuseReport',
-    'abuseReportResolved',
-    'userCreated',
-    'inactiveModeratorsWarning',
-    'inactiveModeratorsInvitationOnlyChanged',
+    "abuseReport",
+    "abuseReportResolved",
+    "userCreated",
+    "inactiveModeratorsWarning",
+    "inactiveModeratorsInvitationOnlyChanged",
 ]
 
 
@@ -19,4 +19,3 @@ class ISystemWebhook(TypedDict):
     on: SystemWebhookEventTypes
     url: str
     secret: str
-

@@ -1,12 +1,19 @@
+from __future__ import annotations
+
 from datetime import datetime
+from typing import TYPE_CHECKING
 
 from mipac.utils.format import str_to_datetime
 from mipac.types.system_webhook import ISystemWebhook, SystemWebhookEventTypes
 
+if TYPE_CHECKING:
+    from mipac.client import ClientManager
+
 
 class SystemWebhook:
-    def __init__(self, raw_system_webhook: ISystemWebhook):
+    def __init__(self, raw_system_webhook: ISystemWebhook, *, client: ClientManager):
         self.__raw_system_webhook: ISystemWebhook = raw_system_webhook
+        self.___client: ClientManager = client
 
     @property
     def id(self) -> str:
@@ -22,11 +29,15 @@ class SystemWebhook:
 
     @property
     def latest_sent_at(self) -> datetime | None:
-        return str_to_datetime(self.__raw_system_webhook["latest_sent_at"]) if self.__raw_system_webhook["latest_sent_at"] else None
+        return (
+            str_to_datetime(self.__raw_system_webhook["latest_sent_at"])
+            if self.__raw_system_webhook["latest_sent_at"]
+            else None
+        )
 
     @property
     def latest_status(self) -> str | None:
-         return self.__raw_system_webhook["latest_status"]
+        return self.__raw_system_webhook["latest_status"]
 
     @property
     def name(self) -> str:

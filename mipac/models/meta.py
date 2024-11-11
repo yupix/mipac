@@ -94,6 +94,7 @@ class Meta(PartialMeta[IMetaDetailed], MetaDetailedOnly):
     def __init__(self, instance_metadata: IMetaDetailed, *, client: ClientManager) -> None:
         super().__init__(instance_metadata, client=client)
 
+
 class AdminMeta:
     def __init__(self, raw_admin_meta: IAdminMeta):
         self.__raw_admin_meta: IAdminMeta = raw_admin_meta
