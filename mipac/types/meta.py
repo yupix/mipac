@@ -96,91 +96,121 @@ class IMetaDetailedOnly(TypedDict):
 
 class IMeta(IPartialMeta, TypedDict): ...
 
-
-class IAdminMeta(TypedDict):  # IMetaに含まれる物が多くあるけど、ない場合もあるので別にする
-    maintainer_name: str | None
-    maintainer_email: str | None
-    version: str
-    name: str | None
-    short_name: str | None
-    uri: str
-    description: str | None
-    langs: list[str]
-    tos_url: str
-    repository_url: str
-    feedback_url: str
-    disable_registration: bool
+class IAdminMeta(TypedDict):
+    cache_remote_files: bool
+    cache_remote_sensitive_files: bool
     email_required_for_signup: bool
     enable_hcaptcha: bool
     hcaptcha_site_key: str | None
+    enable_mcaptcha: bool
+    mcaptcha_site_key: str | None
+    mcaptcha_instance_url: str | None
     enable_recaptcha: bool
-    recaptcha_site_key: str
+    recaptcha_site_key: str | None
     enable_turnstile: bool
-    turnstile_site_key: str
+    turnstile_site_key: str | None
+    enable_testcaptcha: bool
     sw_publickey: str | None
-    theme_color: str
-    mascot_image_url: str
+    mascot_image_url: str | None
     banner_url: str | None
     server_error_image_url: str | None
-    not_found_image_url: str | None
     info_image_url: str | None
+    not_found_image_url: str | None
     icon_url: str | None
-    appint_icon_url: str | None
-    appint_icon_url: str | None
-    background_image_url: str | None
-    logo_image_url: str | None
-    default_light_theme: str | None
-    default_dark_theme: str | None
+    app192_icon_url: str | None
+    app512_icon_url: str | None
     enable_email: bool
     enable_service_worker: bool
     translator_available: bool
-    cache_remote_files: bool
-    cache_remote_sensitive_files: bool
+    silenced_hosts: NotRequired[list[str]]
+    media_silenced_hosts: list[str]
     pinned_users: list[str]
     hidden_tags: list[str]
     blocked_hosts: list[str]
     sensitive_words: list[str]
+    prohibited_words: list[str]
+    prohibited_words_for_name_of_user: list[str]
+    banned_email_domains: NotRequired[list[str]]
     preserved_usernames: list[str]
     hcaptcha_secret_key: str | None
-    recaptcha_secret_key: str
-    turnstile_secret_key: str
-    sensitive_media_detection: ISensitiveMediaDetection
-    sensitive_media_detection_sensitivity: ISensitiveMediaDetectionSentivity
+    mcaptcha_secret_key: str | None
+    recaptcha_secret_key: str | None
+    turnstile_secret_key: str | None
+    sensitive_media_detection: str
+    sensitive_media_detection_sensitivity: str
     set_sensitive_flag_automatically: bool
     enable_sensitive_media_detection_for_videos: bool
-    proxy_account_id: str
-    summaly_proxy: str | None
-    email: str
+    proxy_account_id: str | None
+    email: str | None
     smtp_secure: bool
-    smtp_host: str
-    smtp_port: int
-    smtp_user: str
-    smtp_pass: str
+    smtp_host: str | None
+    smtp_port: float | None
+    smtp_user: str | None
+    smtp_pass: str | None
     sw_private_key: str | None
     use_object_storage: bool
-    object_storage_base_url: str
-    object_storage_bucket: str
-    object_storage_prefix: str
-    object_storage_endpoint: str
-    object_storage_region: str
-    object_storage_port: str | None
-    object_storage_access_key: str
-    object_storage_secret_key: str
-    object_storage_use_s_s_l: bool
+    object_storage_base_url: str | None
+    object_storage_bucket: str | None
+    object_storage_prefix: str | None
+    object_storage_endpoint: str | None
+    object_storage_region: str | None
+    object_storage_port: float | None
+    object_storage_access_key: str | None
+    object_storage_secret_key: str | None
+    object_storage_use_ssl: bool
     object_storage_use_proxy: bool
     object_storage_set_public_read: bool
-    object_storage_sint_force_path_style: bool
-    deepl_auth_key: str | None
-    deepl_is_pro: bool
     enable_ip_logging: bool
     enable_active_email_validation: bool
+    enable_verifymail_api: bool
+    verifymail_auth_key: str | None
+    enable_truemail_api: bool
+    truemail_instance: str | None
+    truemail_auth_key: str | None
     enable_charts_for_remote_user: bool
     enable_charts_for_federated_instances: bool
+    enable_stats_for_federated_instances: bool
     enable_server_machine_stats: bool
     enable_identicon_generation: bool
-    policies: IRolePolicies
-    manifest_json_override: dict[str, Any]
-
+    manifest_json_override: str
+    policies: dict
+    enable_fanout_timeline: bool
+    enable_fanout_timeline_db_fallback: bool
+    per_local_user_user_timeline_cache_max: float
+    per_remote_user_user_timeline_cache_max: float
+    per_user_home_timeline_cache_max: float
+    per_user_list_timeline_cache_max: float
+    enable_reactions_buffering: bool
+    notes_per_one_ad: float
+    background_image_url: str | None
+    deepl_auth_key: str | None
+    deepl_is_pro: bool
+    default_dark_theme: str | None
+    default_light_theme: str | None
+    description: str | None
+    disable_registration: bool
+    impressum_url: str | None
+    maintainer_email: str | None
+    maintainer_name: str | None
+    name: str | None
+    short_name: str | None
+    object_storage_s3_force_path_style: bool
+    privacy_policy_url: str | None
+    inquiry_url: str | None
+    repository_url: str | None
+    summaly_proxy: str | None
+    theme_color: str | None
+    tos_url: str | None
+    uri: str
+    version: str
+    url_preview_enabled: bool
+    url_preview_timeout: float
+    url_preview_maximum_content_length: float
+    url_preview_require_content_length: bool
+    url_preview_user_agent: str | None
+    url_preview_summary_proxy_url: str | None
+    federation: str
+    federation_hosts: list[str]
 
 class IUpdateMetaBody(TypedDict, total=False):
     announcements: list
