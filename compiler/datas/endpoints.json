@@ -2241,31 +2241,31 @@
             },
             "/admin/system-webhook/create": {
                 "path": "/admin/system-webhook/create",
-                "status": "notSupported",
+                "status": "supported",
                 "request_body_hash": "5bdf221beffb4e97ea9f80b94e0a15708db0926b472f4a8938f882b7ae5401d2",
                 "response_body_hash": "8a706b3d642206f37fd2b58155b272dc8725211b8316b7455912a1bb42992edf"
             },
             "/admin/system-webhook/delete": {
                 "path": "/admin/system-webhook/delete",
-                "status": "notSupported",
+                "status": "supported",
                 "request_body_hash": "3e47b10418dc28d7a702f3c13c8f0cd061a88803f92ad7d9009e930a8ba8d004",
                 "response_body_hash": "df9c0f9df08effe88b00991f12e46077998bd6d6c3442ec518e5f463680a2c54"
             },
             "/admin/system-webhook/list": {
                 "path": "/admin/system-webhook/list",
-                "status": "notSupported",
+                "status": "supported",
                 "request_body_hash": "ad94744b31c0b3c6a4f18b7d8eb3e4295fb263a6f8db5f06c016d73a74acf886",
                 "response_body_hash": "59c0e782f8b501d0ee1d9dbfcadf86ac845e5e1c2a878a594bd0bb65f1bbc102"
             },
             "/admin/system-webhook/show": {
                 "path": "/admin/system-webhook/show",
-                "status": "notSupported",
+                "status": "supported",
                 "request_body_hash": "3e47b10418dc28d7a702f3c13c8f0cd061a88803f92ad7d9009e930a8ba8d004",
                 "response_body_hash": "b3e51d24fa36b875bcddf8af5aa9563773430ae9de3cc36b13fd845199a203f7"
             },
             "/admin/system-webhook/update": {
                 "path": "/admin/system-webhook/update",
-                "status": "notSupported",
+                "status": "supported",
                 "request_body_hash": "c9106bef2410dcc5e22f3d4321d65b8c211dc70740cce3bcdcaa3c0654e6451f",
                 "response_body_hash": "8a706b3d642206f37fd2b58155b272dc8725211b8316b7455912a1bb42992edf"
             },

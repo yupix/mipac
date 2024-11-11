@@ -4,7 +4,7 @@
 
 `2024.10.0-beta.6`
 
-## Supported endpoints (177/383)
+## Supported endpoints (182/383)
 
 - [x] /admin/accounts/create
 - [x] /admin/accounts/delete
@@ -114,6 +114,11 @@
 - [x] /users/lists/update-membership
 - [x] /admin/unset-user-avatar
 - [x] /admin/unset-user-banner
+- [x] /admin/system-webhook/create
+- [x] /admin/system-webhook/delete
+- [x] /admin/system-webhook/list
+- [x] /admin/system-webhook/show
+- [x] /admin/system-webhook/update
 
 
 ## Not supported endpoints
@@ -314,11 +319,6 @@
 - [ ] /admin/abuse-report/notification-recipient/create
 - [ ] /admin/abuse-report/notification-recipient/update
 - [ ] /admin/abuse-report/notification-recipient/delete
-- [ ] /admin/system-webhook/create
-- [ ] /admin/system-webhook/delete
-- [ ] /admin/system-webhook/list
-- [ ] /admin/system-webhook/show
-- [ ] /admin/system-webhook/update
 - [ ] /announcements/show
 - [ ] /admin/forward-abuse-user-report
 - [ ] /admin/update-abuse-user-report

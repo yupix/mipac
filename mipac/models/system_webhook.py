@@ -8,6 +8,7 @@ from mipac.types.system_webhook import ISystemWebhook, SystemWebhookEventTypes
 
 if TYPE_CHECKING:
     from mipac.client import ClientManager
+    from mipac.manager.admins.system_webhook import ClientSystemWebhookManager
 
 
 class SystemWebhook:
@@ -54,3 +55,7 @@ class SystemWebhook:
     @property
     def secret(self) -> str:
         return self.__raw_system_webhook["secret"]
+
+    @property
+    def api(self) -> ClientSystemWebhookManager:
+        return self.___client.admin._create_client_system_webhook_manager(self.id)

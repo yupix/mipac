@@ -19,6 +19,7 @@ from mipac.manager.admins.drive import AdminDriveManager
 from mipac.manager.admins.emoji import AdminEmojiManager, ClientAdminEmojiManager
 from mipac.manager.admins.invite import AdminInviteManager
 from mipac.manager.admins.roles import AdminRoleManager, ClientAdminRoleManager
+from mipac.manager.admins.system_webhook import SystemWebhookManager, ClientSystemWebhookManager
 from mipac.manager.admins.user import AdminUserManager
 
 if TYPE_CHECKING:
@@ -41,6 +42,9 @@ class AdminManager(AbstractManager):
         self.drive: AdminDriveManager = AdminDriveManager(session=session, client=client)
         self.account: AdminAccountManager = AdminAccountManager(session=session, client=client)
         self.avatar_decoration: AdminAvatarDecorationManager = AdminAvatarDecorationManager(
+            session=session, client=client
+        )
+        self.system_webhook: SystemWebhookManager = SystemWebhookManager(
             session=session, client=client
         )
 
@@ -75,6 +79,13 @@ class AdminManager(AbstractManager):
     ) -> ClientAdminAvatarDecorationManager:
         return ClientAdminAvatarDecorationManager(
             avatar_decoration_id=avatar_decoration_id,
+            session=self.__session,
+            client=self.__client,
+        )
+
+    def _create_client_system_webhook_manager(self, webhook_id: str) -> ClientSystemWebhookManager:
+        return ClientSystemWebhookManager(
+            webhook_id=webhook_id,
             session=self.__session,
             client=self.__client,
         )
