@@ -96,8 +96,9 @@ class Meta(PartialMeta[IMetaDetailed], MetaDetailedOnly):
 
 
 class AdminMeta:
-    def __init__(self, raw_admin_meta: IAdminMeta):
+    def __init__(self, raw_admin_meta: IAdminMeta, *, client: ClientManager) -> None:
         self.__raw_admin_meta: IAdminMeta = raw_admin_meta
+        self.__client: ClientManager = client
 
     @property
     def cache_remote_files(self):

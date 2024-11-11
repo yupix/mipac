@@ -20,19 +20,13 @@ class AdminActions(SharedAdminUserActions):
     def __init__(self, *, session: HTTPClient, client: ClientManager):
         super().__init__(session=session, client=client)
 
-    async def get_meta(self, detail: bool = False) -> AdminMeta:
+    async def get_meta(self) -> AdminMeta:
         """
         Get admin meta
         Endpoint: `/api/admin/meta`
-
-        Parameters
-        ----------
-        detail : bool, optional
-            flag of detail, by default False
         """
         res: IAdminMeta = await self._session.request(
             Route("POST", "/api/admin/meta"),
-            json={"detail": detail},  # 現状detailがあってもなんも変わらない
             auth=True,
             lower=True,
         )
