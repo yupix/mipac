@@ -1199,6 +1199,24 @@ ClientAdminAvatarDecorationManager
     :members:
 
 
+ClientSystemWebhookManager
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.manager.admins.system_webhook.ClientSystemWebhookManager
+
+.. autoclass:: mipac.manager.admins.system_webhook.ClientSystemWebhookManager
+    :members:
+
+
+SystemWebhookManager
+~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.manager.admins.system_webhook.SystemWebhookManager
+
+.. autoclass:: mipac.manager.admins.system_webhook.SystemWebhookManager
+    :members:
+
+
 AdminManager
 ~~~~~~~~~~~~
 
@@ -1896,6 +1914,33 @@ SharedAvatarDecorationActions
 .. attributetable:: mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions
 
 .. autoclass:: mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions
+    :members:
+
+
+ClientSystemWebhookActions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.system_webhook.ClientSystemWebhookActions
+
+.. autoclass:: mipac.actions.admins.system_webhook.ClientSystemWebhookActions
+    :members:
+
+
+SharedSystemWebhookActions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.system_webhook.SharedSystemWebhookActions
+
+.. autoclass:: mipac.actions.admins.system_webhook.SharedSystemWebhookActions
+    :members:
+
+
+SystemWebhookActions
+~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: mipac.actions.admins.system_webhook.SystemWebhookActions
+
+.. autoclass:: mipac.actions.admins.system_webhook.SystemWebhookActions
     :members:
 
 

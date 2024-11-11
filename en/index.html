@@ -944,7 +944,7 @@ Attributes</span><ul>
 <h3>AdminMeta<a class="headerlink" href="#adminmeta" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.meta.AdminMeta"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.models.meta.AdminMeta">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.meta.</span></span><span class="sig-name descname"><span class="pre">AdminMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_admin_meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IAdminMeta" title="mipac.types.meta.IAdminMeta"><span class="pre">IAdminMeta</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.meta.AdminMeta" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.meta.</span></span><span class="sig-name descname"><span class="pre">AdminMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_admin_meta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.meta.IAdminMeta" title="mipac.types.meta.IAdminMeta"><span class="pre">IAdminMeta</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.meta.AdminMeta" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -976,7 +976,7 @@ Attributes</span><ul>
 <h3>SystemWebhook<a class="headerlink" href="#systemwebhook" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.models.system_webhook.SystemWebhook"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.models.system_webhook.SystemWebhook">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SystemWebhook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_system_webhook</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.system_webhook.ISystemWebhook" title="mipac.types.system_webhook.ISystemWebhook"><span class="pre">ISystemWebhook</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.system_webhook.SystemWebhook" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.models.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SystemWebhook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_system_webhook</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.types.system_webhook.ISystemWebhook" title="mipac.types.system_webhook.ISystemWebhook"><span class="pre">ISystemWebhook</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.models.system_webhook.SystemWebhook" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -3773,6 +3773,22 @@ Attributes</span><ul>
 <div class="py-attribute-table" data-move-to-id="mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager"></div><dl class="py class">
 <dt class="sig sig-object py" id="mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.avatar_decorations.</span></span><span class="sig-name descname"><span class="pre">ClientAdminAvatarDecorationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avatar_decoration_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="clientsystemwebhookmanager">
+<h3>ClientSystemWebhookManager<a class="headerlink" href="#clientsystemwebhookmanager" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.manager.admins.system_webhook.ClientSystemWebhookManager"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.manager.admins.system_webhook.ClientSystemWebhookManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.system_webhook.</span></span><span class="sig-name descname"><span class="pre">ClientSystemWebhookManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webhook_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.system_webhook.ClientSystemWebhookManager" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="systemwebhookmanager">
+<h3>SystemWebhookManager<a class="headerlink" href="#systemwebhookmanager" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.manager.admins.system_webhook.SystemWebhookManager"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.manager.admins.system_webhook.SystemWebhookManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.manager.admins.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SystemWebhookManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.manager.admins.system_webhook.SystemWebhookManager" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </section>
@@ -8692,6 +8708,30 @@ async</span><a class="reference internal" href="#mipac.actions.admins.user.Share
 <dd></dd></dl>
 
 </section>
+<section id="clientsystemwebhookactions">
+<h3>ClientSystemWebhookActions<a class="headerlink" href="#clientsystemwebhookactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.system_webhook.ClientSystemWebhookActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.system_webhook.ClientSystemWebhookActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.system_webhook.</span></span><span class="sig-name descname"><span class="pre">ClientSystemWebhookActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">webhook_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.system_webhook.ClientSystemWebhookActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="sharedsystemwebhookactions">
+<h3>SharedSystemWebhookActions<a class="headerlink" href="#sharedsystemwebhookactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.system_webhook.SharedSystemWebhookActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.system_webhook.SharedSystemWebhookActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SharedSystemWebhookActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.system_webhook.SharedSystemWebhookActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="systemwebhookactions">
+<h3>SystemWebhookActions<a class="headerlink" href="#systemwebhookactions" title="Link to this heading">¶</a></h3>
+<div class="py-attribute-table" data-move-to-id="mipac.actions.admins.system_webhook.SystemWebhookActions"></div><dl class="py class">
+<dt class="sig sig-object py" id="mipac.actions.admins.system_webhook.SystemWebhookActions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.system_webhook.</span></span><span class="sig-name descname"><span class="pre">SystemWebhookActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.system_webhook.SystemWebhookActions" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
 <section id="adminactions">
 <h3>AdminActions<a class="headerlink" href="#adminactions" title="Link to this heading">¶</a></h3>
 <div class="py-attribute-table" data-move-to-id="mipac.actions.admins.admin.AdminActions"><div class="py-attribute-table-column">
@@ -8713,14 +8753,9 @@ async</span><a class="reference internal" href="#mipac.actions.admins.admin.Admi
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mipac.actions.admins.admin.</span></span><span class="sig-name descname"><span class="pre">AdminActions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.http.HTTPClient" title="mipac.http.HTTPClient"><span class="pre">HTTPClient</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#mipac.manager.client.ClientManager" title="mipac.manager.client.ClientManager"><span class="pre">ClientManager</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mipac.actions.admins.admin.AdminActions" title="Link to this definition">¶</a></dt>
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="mipac.actions.admins.admin.AdminActions.get_meta">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_meta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detail</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mipac.models.meta.AdminMeta" title="mipac.models.meta.AdminMeta"><span class="pre">AdminMeta</span></a></span></span><a class="headerlink" href="#mipac.actions.admins.admin.AdminActions.get_meta" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_meta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#mipac.models.meta.AdminMeta" title="mipac.models.meta.AdminMeta"><span class="pre">AdminMeta</span></a></span></span><a class="headerlink" href="#mipac.actions.admins.admin.AdminActions.get_meta" title="Link to this definition">¶</a></dt>
 <dd><p>Get admin meta
 Endpoint: <cite>/api/admin/meta</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>detail</strong> (<em>bool</em><em>, </em><em>optional</em>) – flag of detail, by default False</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -13873,6 +13908,14 @@ Attributes</span><ul>
 <li><a class="reference internal" href="#mipac.manager.admins.avatar_decorations.ClientAdminAvatarDecorationManager"><code class="docutils literal notranslate"><span class="pre">ClientAdminAvatarDecorationManager</span></code></a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#clientsystemwebhookmanager">ClientSystemWebhookManager</a><ul>
+<li><a class="reference internal" href="#mipac.manager.admins.system_webhook.ClientSystemWebhookManager"><code class="docutils literal notranslate"><span class="pre">ClientSystemWebhookManager</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemwebhookmanager">SystemWebhookManager</a><ul>
+<li><a class="reference internal" href="#mipac.manager.admins.system_webhook.SystemWebhookManager"><code class="docutils literal notranslate"><span class="pre">SystemWebhookManager</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#adminmanager">AdminManager</a><ul>
 <li><a class="reference internal" href="#mipac.manager.admins.admin.AdminManager"><code class="docutils literal notranslate"><span class="pre">AdminManager</span></code></a></li>
 </ul>
@@ -14465,6 +14508,18 @@ Attributes</span><ul>
 </li>
 <li><a class="reference internal" href="#sharedavatardecorationactions">SharedAvatarDecorationActions</a><ul>
 <li><a class="reference internal" href="#mipac.actions.admins.avatar_decorations.SharedAvatarDecorationActions"><code class="docutils literal notranslate"><span class="pre">SharedAvatarDecorationActions</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#clientsystemwebhookactions">ClientSystemWebhookActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.system_webhook.ClientSystemWebhookActions"><code class="docutils literal notranslate"><span class="pre">ClientSystemWebhookActions</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sharedsystemwebhookactions">SharedSystemWebhookActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.system_webhook.SharedSystemWebhookActions"><code class="docutils literal notranslate"><span class="pre">SharedSystemWebhookActions</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#systemwebhookactions">SystemWebhookActions</a><ul>
+<li><a class="reference internal" href="#mipac.actions.admins.system_webhook.SystemWebhookActions"><code class="docutils literal notranslate"><span class="pre">SystemWebhookActions</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#adminactions">AdminActions</a><ul>
