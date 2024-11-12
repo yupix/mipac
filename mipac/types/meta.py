@@ -145,7 +145,7 @@ class IAdminMeta(TypedDict):
     email: str | None
     smtp_secure: bool
     smtp_host: str | None
-    smtp_port: float | None
+    smtp_port: int | None
     smtp_user: str | None
     smtp_pass: str | None
     sw_private_key: str | None
@@ -155,7 +155,7 @@ class IAdminMeta(TypedDict):
     object_storage_prefix: str | None
     object_storage_endpoint: str | None
     object_storage_region: str | None
-    object_storage_port: float | None
+    object_storage_port: int | None
     object_storage_access_key: str | None
     object_storage_secret_key: str | None
     object_storage_use_ssl: bool
@@ -177,12 +177,12 @@ class IAdminMeta(TypedDict):
     policies: dict
     enable_fanout_timeline: bool
     enable_fanout_timeline_db_fallback: bool
-    per_local_user_user_timeline_cache_max: float
-    per_remote_user_user_timeline_cache_max: float
-    per_user_home_timeline_cache_max: float
-    per_user_list_timeline_cache_max: float
+    per_local_user_user_timeline_cache_max: int
+    per_remote_user_user_timeline_cache_max: int
+    per_user_home_timeline_cache_max: int
+    per_user_list_timeline_cache_max: int
     enable_reactions_buffering: bool
-    notes_per_one_ad: float
+    notes_per_one_ad: int
     background_image_url: str | None
     deepl_auth_key: str | None
     deepl_is_pro: bool
@@ -205,8 +205,8 @@ class IAdminMeta(TypedDict):
     uri: str
     version: str
     url_preview_enabled: bool
-    url_preview_timeout: float
-    url_preview_maximum_content_length: float
+    url_preview_timeout: int
+    url_preview_maximum_content_length: int
     url_preview_require_content_length: bool
     url_preview_user_agent: str | None
     url_preview_summary_proxy_url: str | None
